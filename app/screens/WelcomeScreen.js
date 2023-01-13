@@ -6,8 +6,15 @@ import Login from "../components/Login";
 import SignUp from "../components/SignUp";
 
 
+function WelcomeScreen({navigation}) {
 
-function WelcomeScreen(props) {
+    const goToSignUp = () => {
+        navigation.push("SignUp")
+    }
+
+    const goToMain = () => {
+        navigation.push("Main")
+    }
 
     const animation = useRef(new Animated.Value(0)).current;
 
@@ -22,8 +29,8 @@ function WelcomeScreen(props) {
             <Animated.Text style={[styles.loginText, {opacity: animation}]}>Welcome to Calmly</Animated.Text>
             <Input placeholder={"Enter email address"} icon={require("../assets/email.png")} iconColor={"#836A6A"}/> 
             <Input placeholder={"Enter password"} icon={require("../assets/lock.png")} iconColor={"#BAB2B2"} security={true}/>
-            <Login title={"Login"} icon={require("../assets/login.png")}/>
-            <SignUp title={"Sign Up"}/>
+            <Login title={"Login"} icon={require("../assets/login.png")} onClick={goToMain}/>
+            <SignUp title={"Sign Up"} onClick={goToSignUp}/>
 
 
             <Button title={"Fade"} onPress={fadeIn}/>

@@ -1,25 +1,18 @@
 import React from 'react';
 import { SafeAreaView, Text, View, Button, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
-import { NavigationContainer } from "@react-navigation/native";
-import { creativeNativeStackNevigator } from "@react-navigation/native-stack";
 
 
 
-function Login({icon, title, navigation}) {
+function Login({icon, title, onClick}) {
 
-    const loginInPressed = () => {
-        navigation.navigate("MainScreen");
-    }
-
-    
     return (
         <SafeAreaView>
 
             <TouchableWithoutFeedback>
 
                 <View style={styles.loginButton}>
-                <TouchableWithoutFeedback onPress={loginInPressed}>
-                    <Text style={styles.login}>{title}</Text>
+                <TouchableWithoutFeedback>
+                    <Text style={styles.login} onPress={onClick}>{title}</Text>
                 </TouchableWithoutFeedback>
                 <TouchableWithoutFeedback>
                     <Image style={styles.image} source={icon}/>

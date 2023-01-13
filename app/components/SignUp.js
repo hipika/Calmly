@@ -1,13 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { SafeAreaView, Text, View, Button, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native';
+import NavigationContainer from '@react-navigation/native';
 
 
-function SignUp({title, icon}) {
 
-    const signInPressed = () => {
-        console.log("WOWOWOOWOWOO")
-    }
-
+function SignUp({title, icon, onClick}) {
 
     return (
         <SafeAreaView>
@@ -17,12 +15,12 @@ function SignUp({title, icon}) {
 
                 <View style={styles.signInButton}>
 
-                    <TouchableWithoutFeedback>
-                        <Text style={styles.signUp}>{title}</Text>
+                    <TouchableWithoutFeedback >
+                        <Text style={styles.signUp} onPress={onClick}>{title}</Text>
                     </TouchableWithoutFeedback>
 
                     <TouchableWithoutFeedback>
-                        <Image style={styles.image} source={icon}/>
+                        <Image style={styles.image} source={icon} />
                     </TouchableWithoutFeedback>
 
                 </View>
@@ -39,7 +37,7 @@ function SignUp({title, icon}) {
 
 const styles = StyleSheet.create({
     signInButton: {
-        marginTop: 10,
+        marginTop: 20,
         width: 110,
         height: 40,
         backgroundColor: "#D9D9D9",

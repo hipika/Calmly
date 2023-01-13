@@ -1,14 +1,13 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet, Text, SafeAreaView, View } from 'react-native';
 
-function MainScreen(props) {
+
+function MainScreen(navigation) {
+
     return (
-        <ScrollView style={styles.container}>
+        <SafeAreaView style={styles.container}>
             
-            <Text>Welcome to Calmly</Text>
-
-
-        </ScrollView>
+        </SafeAreaView>
     );
 }
 
@@ -17,7 +16,17 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "red"
+        backgroundColor: "#fff"
+    },
+
+    quoteText: {
+        color: "black",
+        fontWeight: "bold",
+        fontSize: "15",
+        textAlignVertical: "center",
+        textAlign: "center",
+        justifyContent: "center",
+        alignItems: "center"
     }
 
 

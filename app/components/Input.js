@@ -1,6 +1,8 @@
 import React from 'react';
 import { SafeAreaView, View, Text, StyleSheet, TextInput, Image } from 'react-native';
 import { useState } from 'react';
+
+
 function Input({placeholder, icon, iconColor, security}) {
 
 
