@@ -5,6 +5,7 @@ import { SafeAreaView, Text, View, Button, StyleSheet, Image, TouchableWithoutFe
 
 function Login({icon, title, onClick}) {
 
+
     return (
         <SafeAreaView>
 
@@ -17,7 +18,7 @@ function Login({icon, title, onClick}) {
                 <TouchableWithoutFeedback>
                     <Image style={styles.image} source={icon}/>
                 </TouchableWithoutFeedback>
-
+				
                 </View>
             </TouchableWithoutFeedback>
 

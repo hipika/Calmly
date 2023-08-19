@@ -22,7 +22,7 @@ function SignUp({title, icon, onClick}) {
                     <TouchableWithoutFeedback>
                         <Image style={styles.image} source={icon} />
                     </TouchableWithoutFeedback>
-
+					
                 </View>
             </TouchableWithoutFeedback>
 

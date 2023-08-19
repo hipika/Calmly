@@ -5,7 +5,7 @@ import SignUp from '../components/SignUp';
 
 
 
-function SignUpScreen(props) {
+function SignUpScreen(props, navigation) {
     return (
         <SafeAreaView style={styles.container}>
             <Image source={require("../assets/logo.png")} style={styles.image}/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView, View, Image, TouchableWithoutFeedback, TextInput, Animated, Button } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, Image, TouchableWithoutFeedback, TextInput, Animated, Button, addListener } from 'react-native';
 import { useState, useRef } from 'react';
 import Input from "../components/Input";
 import Login from "../components/Login";
@@ -7,6 +7,8 @@ import SignUp from "../components/SignUp";
 
 
 function WelcomeScreen({navigation}) {
+
+
 
     const goToSignUp = () => {
         navigation.push("SignUp")
@@ -34,7 +36,7 @@ function WelcomeScreen({navigation}) {
 
 
             <Button title={"Fade"} onPress={fadeIn}/>
-
+            
 
         </SafeAreaView>
     );
