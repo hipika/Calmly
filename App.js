@@ -8,9 +8,10 @@ import MainScreen from './app/screens/MainScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Navigation from "./app/navigation/Navigation";
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 const Stack = createNativeStackNavigator();
-
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
   console.log("THis is working")
@@ -33,11 +34,10 @@ export default function App() {
           name="Main"
           component={MainScreen}
           options={{headerShown: false}}
-          
         />
 
       </Stack.Navigator>
-      
+    
     </NavigationContainer>
     // <SafeAreaView>
     //   <Navigation />

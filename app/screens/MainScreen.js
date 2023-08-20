@@ -4,24 +4,29 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import SignUpScreen from './SignUpScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
+import WelcomeScreen from './WelcomeScreen';
 
 const Tabs = createMaterialBottomTabNavigator();
 
 function MainScreen(navigation) {
 
     return (
-        <SafeAreaView style={styles.container}>
-            <Text>This is the main screen</Text>
-            <Tabs.Navigator>
-                <Tabs.Screen name="SignUp" component={SignUpScreen}
-                options={{
-                    tabBarLabel:"Stuff",
-                    tabBarColor:"red"
-                }}/>
+        
+            // <SafeAreaView style={styles.container}>
+                // <Text>This is the main screen</Text>
+                <Tabs.Navigator>
+                    <Tabs.Screen name="Welcome" component={WelcomeScreen}
+                    options={{
+                        tabBarLabel:"Stuff",
+                        tabBarColor:"red"
+                    }}/>
 
-            </Tabs.Navigator>
+                </Tabs.Navigator>
             
-        </SafeAreaView>
+            // </SafeAreaView>
+
+            
+        
     );
 }
 
