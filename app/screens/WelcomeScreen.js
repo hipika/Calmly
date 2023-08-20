@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView, View, Image, TouchableWithoutFeedback, TextInput, Animated, Button, addListener } from 'react-native';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Input from "../components/Input";
 import Login from "../components/Login";
 import SignUp from "../components/SignUp";
@@ -20,6 +20,14 @@ function WelcomeScreen({navigation}) {
 
     const animation = useRef(new Animated.Value(0)).current;
 
+    useEffect(() => {
+        Animated.timing(animation, {
+            toValue: 1,
+            duration: 5000,
+            useNativeDriver: true,
+        }).start();;
+    }, [animation]);
+
     const fadeIn = () => {
         Animated.timing(animation, {toValue: 1, duration: 5000}).start();
     }
@@ -33,9 +41,6 @@ function WelcomeScreen({navigation}) {
             <Input placeholder={"Enter password"} icon={require("../assets/lock.png")} iconColor={"#BAB2B2"} security={true}/>
             <Login title={"Login"} icon={require("../assets/login.png")} onClick={goToMain}/>
             <SignUp title={"Sign Up"} onClick={goToSignUp}/>
-
-
-            <Button title={"Fade"} onPress={fadeIn}/>
             
 
         </SafeAreaView>
