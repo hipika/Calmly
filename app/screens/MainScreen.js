@@ -1,55 +1,14 @@
 import React from 'react';
-import { ScrollView, StyleSheet, Text, SafeAreaView, View } from 'react-native';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import SignUpScreen from './SignUpScreen';
+import { SafeAreaView, Text } from 'react-native-web';
 
-import { NavigationContainer } from '@react-navigation/native';
-import WelcomeScreen from './WelcomeScreen';
-
-const Tabs = createMaterialBottomTabNavigator();
-
-function MainScreen(navigation) {
-
+function MainScreen(props) {
     return (
-        
-            // <SafeAreaView style={styles.container}>
-                // <Text>This is the main screen</Text>
-                <Tabs.Navigator>
-                    <Tabs.Screen name="Welcome" component={WelcomeScreen}
-                    options={{
-                        tabBarLabel:"Stuff",
-                        tabBarColor:"red"
-                    }}/>
-
-                </Tabs.Navigator>
-            
-            // </SafeAreaView>
-
-            
-        
+        <SafeAreaView>
+            <Text>
+                This is the main screen
+            </Text>
+        </SafeAreaView>>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#fff"
-    },
-
-    quoteText: {
-        color: "black",
-        fontWeight: "bold",
-        fontSize: "15",
-        textAlignVertical: "center",
-        textAlign: "center",
-        justifyContent: "center",
-        alignItems: "center"
-    }
-    
-    
-
-})
 
 export default MainScreen;
