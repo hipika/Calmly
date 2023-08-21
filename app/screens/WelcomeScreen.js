@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import Input from "../components/Input";
 import Login from "../components/Login";
 import SignUp from "../components/SignUp";
+import Navigation from '../navigation/Navigation';
 
 
 function WelcomeScreen({navigation}) {
@@ -15,7 +16,7 @@ function WelcomeScreen({navigation}) {
     }
 
     const goToMain = () => {
-        navigation.push("GTM")
+        navigation.push("HomeScreen")
     }
 
     const animation = useRef(new Animated.Value(0)).current;

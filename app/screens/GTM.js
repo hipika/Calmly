@@ -23,7 +23,7 @@ function GTM(navigation) {
 
     return (
 
-                <Tabs.Navigator shifting={true}>
+                <Tabs.Navigator shifting={true} barStyle={{ backgroundColor: "tomato" }}>
                     
                     {/* <Tabs.Screen name="Main" component={MainScreen}
                     options={{
@@ -36,7 +36,7 @@ function GTM(navigation) {
 
                     {Tab.map((_, index) => {
                         return (
-                            <Tabs.Screen key={index} name = {_.route} component={_.component} 
+                            <Tabs.Screen key={index} name = {_.route} component={_.component}
                                
                             />
                         )

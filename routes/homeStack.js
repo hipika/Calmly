@@ -3,7 +3,7 @@ import { createAppContainer } from "react-navigation";
 import WelcomeScreen from "../app/screens/WelcomeScreen";
 import MainScreen from "../app/screens/MainScreen";
 import SignUpScreen from "../app/screens/SignUpScreen";
-
+import Navigation from "../app/navigation/Navigation";
 
 
 const screens = {
@@ -18,6 +18,10 @@ const screens = {
     Main: {
         screen: MainScreen
     },
+
+    Navigation: {
+        screen: Navigation
+    }
 
 
 }
