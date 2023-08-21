@@ -1,14 +1,19 @@
 import React from 'react';
-import { SafeAreaView, Text } from 'react-native-web';
+import { Text, SafeAreaView, StyleSheet, TouchableWithoutFeedback, Image } from "react-native";
 
-function MainScreen(props) {
+
+
+
+function MainScreen() {
     return (
         <SafeAreaView>
             <Text>
-                This is the main screen
+                Main Screen
             </Text>
-        </SafeAreaView>>
+        </SafeAreaView>
+
     );
 }
+
 
 export default MainScreen;

@@ -12,10 +12,7 @@ const Tabs = createMaterialBottomTabNavigator();
 function GoesToMain(navigation) {
 
     return (
-        
-            // <SafeAreaView style={styles.container}>
-                // <Text>This is the main screen</Text>
-            <NavigationContainer independent={true}>
+
                 <Tabs.Navigator>
                     <Tabs.Screen name="Main" component={MainScreen}
                     options={{
@@ -24,12 +21,8 @@ function GoesToMain(navigation) {
                     }}/>
 
                 </Tabs.Navigator>
-
-
-
-            </NavigationContainer>
             
-            // </SafeAreaView>
+
 
             
         

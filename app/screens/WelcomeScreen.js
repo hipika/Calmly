@@ -15,7 +15,7 @@ function WelcomeScreen({navigation}) {
     }
 
     const goToMain = () => {
-        navigation.push("Main")
+        navigation.push("GTM")
     }
 
     const animation = useRef(new Animated.Value(0)).current;

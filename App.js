@@ -31,12 +31,11 @@ export default function App() {
           component={SignUpScreen}
           options={{title: "Sign Up"}}
         />
-        <Stack.Screen 
+        <Stack.Screen // Main Screen
           name="GTM"
           component={GTM}
-          options={{headerShown: false}}
+          options={{headerShown: false, gestureEnabled: false}}
         />
-
 
       </Stack.Navigator>
     
