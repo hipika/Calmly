@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import SignUpScreen from './app/screens/SignUpScreen';
 import MainScreen from './app/screens/MainScreen';
+import GTM from './app/screens/GTM';
 // import Navigator from "./routes/homeStack"; 
 // import { StackActions } from '@react-navigation/native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -31,10 +32,11 @@ export default function App() {
           options={{title: "Sign Up"}}
         />
         <Stack.Screen 
-          name="Main"
-          component={MainScreen}
+          name="GTM"
+          component={GTM}
           options={{headerShown: false}}
         />
+
 
       </Stack.Navigator>
     
