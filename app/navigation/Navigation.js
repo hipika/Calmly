@@ -34,6 +34,7 @@ const HomeScreen = () => {
             },
             tabBarShowLabel: false,
         
+        
         }}>
             <Tab.Screen name="Main" component={MainScreen} options={{
                 tabBarIcon: ({focused, size}) => {
@@ -88,7 +89,7 @@ const Navigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false}}>
-                <Stack.Screen name='Welcome' component={WelcomeScreen} options={{headerShown: false}}/>
+                <Stack.Screen name='Welcome' component={WelcomeScreen} options={{headerShown: false, gestureEnabled: false}}/>
                 <Stack.Screen name='SignUp' component={SignUpScreen}/>
                 <Stack.Screen name='HomeScreen' component={HomeScreen} options={{gestureEnabled: false}}/>
             </Stack.Navigator>
