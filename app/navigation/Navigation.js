@@ -1,5 +1,5 @@
 import React, { Profiler } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Settings } from 'react-native';
 import { NavigationContainer, StackActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from "../screens/WelcomeScreen";
@@ -8,18 +8,75 @@ import MainScreen from '../screens/MainScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import ProfileScreen from '../screens/ProfileScreen';
-import OtherScreen from '../screens/OtherScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+import ClockScreen from '../screens/ClockScreen';
+import LikeScreen from '../screens/LikeScreen';
 import { Title } from 'react-native-paper';
+import Ionicon from '@expo/vector-icons/Ionicons'
+
+
+
 const Stack = createNativeStackNavigator();
-const Tab = createMaterialBottomTabNavigator();
-
-
+const Tab = createBottomTabNavigator();
 
 const HomeScreen = () => {
     return (
-        <Tab.Navigator shifting={true} barStyle={{backgroundColor: "tomato"}}>
-            <Tab.Screen name="Main" component={MainScreen}/>
-            <Tab.Screen name="Other" component={OtherScreen}/>
+        <Tab.Navigator screenOptions={{
+            tabBarStyle: {
+                position: "absolute",
+                height: 90,
+                borderRadius: 20,
+                left: 20,
+                right: 20,
+                bottom: 25,
+                paddingBottom: 5,
+                backgroundColor: "#EBECF0"
+            },
+            tabBarShowLabel: false,
+        
+        }}>
+            <Tab.Screen name="Main" component={MainScreen} options={{
+                tabBarIcon: ({focused, size}) => {
+                    return <Ionicon name={'home'} size={30}/>
+                },
+                header: () => {
+                    return false;
+                }
+                
+                
+            }}/>
+
+            <Tab.Screen name="Like" component={LikeScreen} options={{
+                tabBarIcon: ({size}) => {
+                    return <Ionicon name={"heart"} size={30}/>
+                },
+                header: () => {
+                    return false;
+                },
+            
+            }}/>
+
+            <Tab.Screen name="Clock" component={ClockScreen} options={{
+                tabBarIcon: ({size}) => {
+                    return <Ionicon name={"time"} size={30}/>
+                },
+                header: () => {
+                    return false;
+                }
+            
+            }}/>
+
+            <Tab.Screen name="Settings" component={SettingsScreen} options={{
+                tabBarIcon: ({size}) => {
+                    return <Ionicon name={"person"} size={30}/>
+                },
+                header: () => {
+                    return false;
+                }
+            
+            }}/>
+
+            
         </Tab.Navigator>
 
 

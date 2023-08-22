@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, SafeAreaView, StyleSheet, TouchableWithoutFeedback, Image } from "react-native";
 import Input from '../components/Input';
 import SignUp from '../components/SignUp';
-
+import Ionicons from 'react-native-vector-icons/Ionicons'
 
 
 function SignUpScreen(props, navigation) {

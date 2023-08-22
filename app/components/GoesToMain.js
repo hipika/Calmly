@@ -17,7 +17,7 @@ function GoesToMain(navigation) {
                     <Tabs.Screen name="Main" component={MainScreen}
                     options={{
                         tabBarLabel:"Stuff",
-                        tabBarColor:"red"
+                        
                     }}/>
 
                 </Tabs.Navigator>

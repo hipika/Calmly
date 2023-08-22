@@ -4,11 +4,11 @@ import { Text, SafeAreaView, StyleSheet, TouchableWithoutFeedback, Image } from 
 
 
 
-function OtherScreen() {
+function LikeScreen() {
     return (
         <SafeAreaView>
             <Text>
-                Other Screen
+                Like Screen
             </Text>
         </SafeAreaView>
 
@@ -16,4 +16,4 @@ function OtherScreen() {
 }
 
 
-export default OtherScreen;
+export default LikeScreen;
