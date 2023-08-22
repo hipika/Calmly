@@ -41,7 +41,7 @@ function WelcomeScreen({navigation}) {
             <Input placeholder={"Enter email address"} icon={require("../assets/email.png")} iconColor={"#836A6A"}/> 
             <Input placeholder={"Enter password"} icon={require("../assets/lock.png")} iconColor={"#BAB2B2"} security={true}/>
             <Login title={"Login"} icon={require("../assets/login.png")} onClick={goToMain}/>
-            <SignUp title={"Sign Up"} onClick={goToSignUp}/>
+            <SignUp title={"Sign Up"} icon={require("../assets/login.png")} onClick={goToSignUp}/>
             
 
         </SafeAreaView>
