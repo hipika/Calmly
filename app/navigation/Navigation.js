@@ -37,8 +37,8 @@ const HomeScreen = () => {
         
         }}>
             <Tab.Screen name="Main" component={MainScreen} options={{
-                tabBarIcon: ({focused, size}) => {
-                    return <Ionicon name={'home'} size={30}/>
+                tabBarIcon: ({focused}) => {
+                    return <Ionicon name={focused ? "home" : "home-outline"} size={25} />
                 },
                 header: () => {
                     return false;
@@ -48,8 +48,8 @@ const HomeScreen = () => {
             }}/>
 
             <Tab.Screen name="Like" component={LikeScreen} options={{
-                tabBarIcon: ({size}) => {
-                    return <Ionicon name={"heart"} size={30}/>
+                tabBarIcon: ({focused}) => {
+                    return <Ionicon name={focused ? "heart" : "heart-outline"} size={25}/>
                 },
                 header: () => {
                     return false;
@@ -58,8 +58,8 @@ const HomeScreen = () => {
             }}/>
 
             <Tab.Screen name="Clock" component={ClockScreen} options={{
-                tabBarIcon: ({size}) => {
-                    return <Ionicon name={"time"} size={30}/>
+                tabBarIcon: ({focused}) => {
+                    return <Ionicon name={focused ? "time" : "time-outline"} size={25}/>
                 },
                 header: () => {
                     return false;
@@ -68,8 +68,8 @@ const HomeScreen = () => {
             }}/>
 
             <Tab.Screen name="Settings" component={SettingsScreen} options={{
-                tabBarIcon: ({size}) => {
-                    return <Ionicon name={"person"} size={30}/>
+                tabBarIcon: ({focused}) => {
+                    return <Ionicon name={focused ? "person" : "person-outline"} size={25}/>
                 },
                 header: () => {
                     return false;
